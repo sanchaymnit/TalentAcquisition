@@ -25,7 +25,7 @@ public class DecisionMaker {
 		HashSet<String> hiredCompanies = new HashSet<>();
 		for (Interviewee p : interviewees) {
 
-			int exp = Integer.valueOf(p.getExperience());
+			Double exp = Double.valueOf(p.getExperience());
 			hiredCompanies.add(p.getPrevOrgName());
 			if (exp >= 1 && exp <= 5) {
 				oneToFive++;
@@ -47,7 +47,8 @@ public class DecisionMaker {
 
 		return allinterviewees.stream()
 				.filter(interviewee -> interviewee.getHiringDetailsInfo().getHiringDate().after(fromDate)
-						&& interviewee.getHiringDetailsInfo().getHiringDate().before(toDate))
+						&& interviewee.getHiringDetailsInfo().getHiringDate().before(toDate)
+						&& interviewee.getHiringDetailsInfo().isSelection())
 				.collect(Collectors.toList());
 	}
 
