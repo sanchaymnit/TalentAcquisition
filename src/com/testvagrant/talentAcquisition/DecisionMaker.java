@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 import com.testvagrant.talentAcquisition.testData.IntervieweeDataCreator;
@@ -39,7 +40,7 @@ public class DecisionMaker {
 		System.out.println("People hired in 1-5 years experience range: " + oneToFive);
 		System.out.println("People hired in 5-10 years experience range: " + fiveToTen);
 		System.out.println("People hired in 10-15 years experience range: " + tenToFifteen);
-		System.out.println("Companies we hired from: " + hiredCompanies);
+		System.out.println("Companies we hired from: " + new TreeSet<String>(hiredCompanies));
 	}
 
 	private static List<Interviewee> intervieweesWithinTheDateRange(List<Interviewee> allinterviewees, Date fromDate,

@@ -23,6 +23,8 @@ public class IntervieweeDataCreator {
 				.withDate(new GregorianCalendar(2019, Calendar.NOVEMBER, 21).getTime()).withSelection(true).build();
 		HiringDetails hiringDetailsInfo4 = new HiringDetailsBuilder()
 				.withDate(new GregorianCalendar(2019, Calendar.NOVEMBER, 25).getTime()).withSelection(true).build();
+		HiringDetails hiringDetailsInfo5 = new HiringDetailsBuilder()
+				.withDate(new GregorianCalendar(2019, Calendar.DECEMBER, 25).getTime()).withSelection(true).build();
 
 		createInterviewees.add(new IntervieweeBuilder().withName("ABC").withExperience("4.5").withPrevOrgName("Sapient")
 				.withHiringDetailsInfo(hiringDetailsInfo1).build());
@@ -33,7 +35,8 @@ public class IntervieweeDataCreator {
 
 		createInterviewees.add(new IntervieweeBuilder().withName("XYZ").withExperience("2.5").withPrevOrgName("Planit")
 				.withHiringDetailsInfo(hiringDetailsInfo4).build());
-
+		createInterviewees.add(new IntervieweeBuilder().withName("DEF").withExperience("11.5")
+				.withPrevOrgName("Sapient").withHiringDetailsInfo(hiringDetailsInfo5).build());
 		return createInterviewees;
 	}
 
